@@ -1,7 +1,3 @@
-
-
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:taxico/screens/account_setting/account.dart';
@@ -20,12 +16,7 @@ class MyApp extends StatelessWidget {
 
       title: 'Flutter',
       debugShowCheckedModeBanner: false,
-      home:WelcomeScreen(),
+      home:SignUpScreen(),
     );
   }
 }
-
-
-
-
-
