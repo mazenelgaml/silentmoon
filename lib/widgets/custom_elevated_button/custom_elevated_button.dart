@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:get/get.dart';
 
 class CustomElevatedButton extends StatelessWidget {
@@ -7,7 +9,7 @@ final Function onPressed;
 final String text;
 final Color textColor;
 final Color buttonColor;
-IconData? icon;
+String? icon;
   @override
   Widget build(BuildContext context) {
     return  ElevatedButton(
@@ -21,7 +23,9 @@ IconData? icon;
         mainAxisAlignment: MainAxisAlignment.center,
 
         children: [
-          Icon(icon),
+         Container(
+           child:Image(image:  AssetImage(icon??"")),
+         ),
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
             child: Text(
