@@ -1,15 +1,31 @@
+<<<<<<< Updated upstream
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
+=======
+
+import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
+import 'package:taxico/screens/account_setting/account.dart';
+import 'package:taxico/screens/sign_up/sign_up_screen.dart';
+import 'package:taxico/screens/welcome/welcome_screen.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+
+>>>>>>> Stashed changes
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+<<<<<<< Updated upstream
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -120,6 +136,12 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+=======
+    return GetMaterialApp(
+      title: 'Flutter',
+      debugShowCheckedModeBanner: false,
+      home:WelcomeScreen(),
+>>>>>>> Stashed changes
     );
   }
 }
