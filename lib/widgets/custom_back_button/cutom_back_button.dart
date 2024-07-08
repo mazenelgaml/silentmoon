@@ -6,23 +6,17 @@ class CustomBackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 50,
-      height: 50,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(100),
-          color: Colors.white
-      ),
-      child: Center(
-        child: IconButton(onPressed: (){
-          Get.back();
-        },
-          icon: Center(
-            child: Icon(
-              Icons.keyboard_backspace,
-              color: Color(0xff2DBB54),
-            ),
-          ) ,),
+    return InkWell(
+      onTap: (){Get.back();},
+      child: Container(
+        child: CircleAvatar(
+          radius: 30.0,
+          backgroundColor: Colors.grey[100],
+          child: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+        ),
       ),
     );
   }
