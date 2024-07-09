@@ -48,7 +48,7 @@ class ChoosetopicScreen extends StatelessWidget {
                   List<BenefitCardData> benefits = [
                     BenefitCardData(
                       title: 'Reduce Stress',
-                      imagePath: 'assets/images/reduce stress.png',
+                      imagePath: 'assets/images/reduces stress.png',
                       color: Color(0xff808AFF),
                     ),
                     BenefitCardData(
