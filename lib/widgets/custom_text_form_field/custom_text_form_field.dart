@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 class CustomTextFormField extends StatelessWidget {
   CustomTextFormField({super.key, required this.text,this.icon});
     final String text;
-    Icon? icon;
+    Widget? icon;
 
   @override
   Widget build(BuildContext context) {
