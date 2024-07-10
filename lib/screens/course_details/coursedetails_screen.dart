@@ -97,11 +97,15 @@ class _CoursedetailsScreenState extends State<CoursedetailsScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.fromLTRB(24.0, 40.0, 24.0, 16.0),
-                  child: Text(
-                    "Happy\nMorning",
-                    style: TextStyle(
-                      fontSize: 34.0,
-                      fontWeight: FontWeight.bold,
+                  child: Container(
+                    height: 95,
+                    width: 150,
+                    child: Text(
+                      "Happy Morning",
+                      style: TextStyle(
+                        fontSize: 34.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
@@ -117,48 +121,52 @@ class _CoursedetailsScreenState extends State<CoursedetailsScreen> {
                 ),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Row(
-                  children: [
-                    Icon(Icons.favorite, color: Colors.red),
-                    SizedBox(width: 8),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "222222222",
-                          style: TextStyle(fontSize: 14, color: Colors.grey),
-                        ),
-                        Text(
-                          "favorites",
-                          style: TextStyle(fontSize: 14, color: Colors.grey),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Icon(Icons.headphones, color: Color(0xff7FD2F2)),
-                    SizedBox(width: 8),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "222222222",
-                          style: TextStyle(fontSize: 14, color: Colors.grey),
-                        ),
-                        Text(
-                          "Lestining",
-                          style: TextStyle(fontSize: 14, color: Colors.grey),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
+            Container(
+              width: Get.width*0.7,
+              margin: EdgeInsets.only(top: 5,bottom: 5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.favorite, color: Colors.red),
+                      SizedBox(width: 8),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "222222222",
+                            style: TextStyle(fontSize: 14, color: Colors.grey),
+                          ),
+                          Text(
+                            "favorites",
+                            style: TextStyle(fontSize: 14, color: Colors.grey),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.headphones, color: Color(0xff7FD2F2)),
+                      SizedBox(width: 8),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "222222222",
+                            style: TextStyle(fontSize: 14, color: Colors.grey),
+                          ),
+                          Text(
+                            "Lestining",
+                            style: TextStyle(fontSize: 14, color: Colors.grey),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:taxico/screens/home1/home_screen_1.dart';
 
 class MyBottomNavigationBar extends StatefulWidget {
+  MyBottomNavigationBar({super.key,this.home,this.mediate,this.music,this.profile,this.sleep});
+  Widget?home;
+  Widget?sleep;
+  Widget?mediate;
+  Widget?music;
+  Widget?profile;
 
   @override
   State<MyBottomNavigationBar> createState() => _MyBottomNavigationBarState();
@@ -14,40 +21,59 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
     setState(() {
       _selectedIndex = index;
     });
+    if(_selectedIndex==0){
+      Get.to(()=>HomeScreen1());
+    }else if(_selectedIndex==1){
+
+    }else if(_selectedIndex==2){
+
+    }else if(_selectedIndex==3){
+
+    }else{
+
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
+    return  BottomNavigationBar(
         type: BottomNavigationBarType.fixed, // Ensures all labels are always shown
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: widget.home??Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.nightlight_round),
+            icon:widget.sleep?? Image(image: AssetImage("assets/images/sleepIcon.png"),),
             label: 'Sleep',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.spa),
+            icon: widget.mediate?? Image(image: AssetImage("assets/images/mediateIcon.png"),),
             label: 'Meditate',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.music_note),
+            icon: widget.music??Image(image: AssetImage("assets/images/muicIcon.png"),),
             label: 'Music',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon:  widget.profile??Image(image: AssetImage("assets/images/profileIcon.png"),),
             label: 'Afsar',
           ),
         ],
+        selectedLabelStyle: TextStyle(
+          fontWeight: FontWeight.w800,
+          color: Color(0xff8E97FD),
+            fontSize: 15
+        ),
+        unselectedLabelStyle:  TextStyle(
+            fontWeight: FontWeight.w600,
+          color: Colors.grey,
+          fontSize: 15
+        ),
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Color(0xff8E97FD),
         unselectedItemColor: Colors.grey,
         onTap: _onItemTapped,
-      ),
-    );
+      );
   }
 }
