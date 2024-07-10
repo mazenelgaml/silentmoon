@@ -83,7 +83,7 @@ class WelcomeScreen extends StatelessWidget {
                borderRadius: BorderRadius.circular(38)
              ),
              child: CustomElevatedButton(onPressed: (){}, text: "Get Started", textColor: Color(0xff3F414E),
-               buttonColor: Color(0xffEBEAEC),),
+               buttonColor: Color(0xffEBEAEC), ),
            )
           ],
         ),
