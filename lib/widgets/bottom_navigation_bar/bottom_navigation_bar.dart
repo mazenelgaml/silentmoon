@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:taxico/screens/Meditate_v_2/Meditate%20_v_2_screen.dart';
 import 'package:taxico/screens/home1/home_screen_1.dart';
 
 class MyBottomNavigationBar extends StatefulWidget {
@@ -26,7 +27,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
     }else if(_selectedIndex==1){
 
     }else if(_selectedIndex==2){
-
+         Get.to(()=>MediateV2Screen());
     }else if(_selectedIndex==3){
 
     }else{
@@ -40,7 +41,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
         type: BottomNavigationBarType.fixed, // Ensures all labels are always shown
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: widget.home??Icon(Icons.home),
+            icon: widget.home??Image(image: AssetImage("assets/images/homeBottomIcon.png"),),
             label: 'Home',
           ),
           BottomNavigationBarItem(
